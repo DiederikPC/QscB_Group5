@@ -1,0 +1,43 @@
+name: napari_practical
+display_name: napari_practical
+contributions:
+  commands:
+    - id: napari_practical.get_reader
+      python_name: napari_practical._reader:napari_get_reader
+      title: Open data with napari_practical
+    - id: napari_practical.write_multiple
+      python_name: napari_practical._writer:write_multiple
+      title: Save multi-layer data with napari_practical
+    - id: napari_practical.write_single_image
+      python_name: napari_practical._writer:write_single_image
+      title: Save image data with napari_practical
+    - id: napari_practical.make_sample_data
+      python_name: napari_practical._sample_data:make_sample_data
+      title: Load sample data from napari_practical
+    - id: napari_practical.random_forest
+      python_name: napari_practical._widget:RandomForest
+      title: random forest
+    - id: napari_practical.segmentation
+      python_name: napari_practical._widget:Watershed
+      title: segmentation
+    - id: napari_practical.spot_finding
+      python_name: napari_practical._widget:SpotFinder
+      title: spot finding
+  readers:
+    - command: napari_practical.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy']
+  writers:
+    - command: napari_practical.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: napari_practical.write_single_image
+      layer_types: ['image']
+      filename_extensions: ['.npy']
+  widgets:
+    - command: napari_practical.random_forest
+      display_name: Random Forest
+    - command: napari_practical.segmentation
+      display_name: Segmentation
+    - command: napari_practical.spot_finding
+      display_name: Spot finder
