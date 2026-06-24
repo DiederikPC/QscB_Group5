@@ -11,7 +11,7 @@ R2:
    Gal80_deactivation*Gal3_on*Gal80
 R3:
     {2}Gal80 > Gal80_on
-    Gal80_activation*Gal80*(Gal80-1)
+    Gal80_dimerisation*Gal80*(Gal80-1)
 
 R4:
     Gal4+Gal80_on > Gal4_off
@@ -32,7 +32,7 @@ R8:
     k8*Gal4_off
 R9:
     Off>On
-    Gal3_dna_binding*Gal3_on*Off
+    Gal4_dna_binding*Gal4*Off
 
 R10:
     On>Off
@@ -64,38 +64,38 @@ R16:
     Glu_consumption*Glu
 
 # Fixed species
-Gal=100
+Gal=300
 
 
 # Variable species
 On=0
 Off=1
-Gal3_off=100
+Gal3_off=8
 Gal3_on=0
 Gal80=0
-Gal80_on=100
+Gal80_on=30
 Gal80_off=0
-Gal4=100
-Gal4_off=0
-Mig1_out=10
-Mig1=0
+Gal4=0
+Gal4_off=20
+Mig1_out=0
+Mig1=30
 Gal1=0
-Glu=0
+Glu=20
 
 # Parameters
-Gal_binding = 10
-Gal80_deactivation = 1
-Gal80_activation = 1
-Gal4_deactivation = 1
-Gal_dissociation = 10
-k6 = 1
-k7 = 10
-k8 = 1
-Gal3_dna_binding = 10
+Gal_binding = 0.00000745
+Gal80_deactivation =  0.000172
+Gal80_dimerisation = 0.001
+Gal4_deactivation = 0.33
+Gal_dissociation = 890
+k6 = 0.168
+k7 = 100
+k8 = 0.6
+Gal4_dna_binding = 0.5
 Mig1_repression = 1000
-transcription_rate = 100
-degradation_rate = 1
-Mig1_import = 10
-Mig1_export = 0.01
-Glu_import=0.1
-Glu_consumption=0
+transcription_rate = 4
+degradation_rate = 0.04
+Mig1_import = 0.002
+Mig1_export = 0.05
+Glu_import=0
+Glu_consumption=0.015
